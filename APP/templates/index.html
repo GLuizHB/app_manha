@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='APP/css/style.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
     
 </head>
 <body>
     <div class="login-container">
         <img src="https://static.portaldaindustria.com.br/media/uploads/logotipos/logo-senai.png" alt="Logo da Empresa" width="200" height="100">
         <h2>LOGIN</h2>
-        <form action="login.php" method="post">
+        <form action="/logar" method="post">
             <input type="text" name="ra" placeholder="RA" required>
             <input type="submit" value="ENVIAR">
         </form>
-        <a href="#">Esqueceu seu RA?</a>
+        <a href="{{url_for('cadastrar_aluno')}}">Cadastre-se</a>
     </div>
 </body>
 </html>
+
+
+<!-- 
+Crie os campos para registrar o aluno conforme MER
+-->
