@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/APP/static/css/background.jpg');
+    background-color: #00000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #181818;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 200px 50px #00b7ff33;
+}
+
+.login-container:hover {
+    box-shadow: 0 0 200px 50px rgba(0, 238, 255, 0.514);
+    transition: 3 ease-in-out;
+}
+
+
+.login-container img {
+    margin-bottom: 20px;
+}
+
+.login-container h2 {
+    margin-bottom: 30px;
+    color: #ffffff;
+
+}
+
+.login-container input[type="text"] {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.login-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.4s ease;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #0056b3;
+    color: #52a0f3;
+}
+
+.login-container a {
+    color: #007bff;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+    color: #52a0f3;
+}
