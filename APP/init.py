@@ -15,5 +15,9 @@ def logar_ra():
     ra = request.form['ra']
     return f"O RA informado é:{ra}"
 
+@app.route('/diariobordo')
+def diariobordo():
+    return render_template('diariobordo.html')
+
 
 app.run(debug=True)
