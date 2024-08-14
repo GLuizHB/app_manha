@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,Request
 
 app = Flask(__name__)
 
@@ -9,5 +9,11 @@ def index():
 @app.route('/novoaluno')
 def cadastrar_aluno():
     return render_template('novoaluno.html')
+
+@app.route('/logar',methods=['post'])
+def logar_ra():
+    ra = request.form['ra']
+    return f"O RA informado é:{ra}"
+
 
 app.run(debug=True)
