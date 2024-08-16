@@ -22,17 +22,14 @@ body {
     box-shadow: 0 0 200px 50px #00b7ff33;
 }
 
-.mensagem {
-    width: 90px;
-    padding: 10px;
-    background-color: #f07878;
-    border-radius: 10px;
-    color: #ffffff;
-    font-size: 14px;
-    text-align: center;
-    margin-top: 10px;
-}
 
+
+.text-center {
+    text-align: center;
+    color: #ff0000;
+    padding: 10px;
+    font-size: 14px;
+}
 
 .login-container:hover {
     box-shadow: 0 0 200px 50px rgba(0, 238, 255, 0.514);

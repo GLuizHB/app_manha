@@ -16,6 +16,19 @@
             align-items: center;
             height: 100vh;
             color: #fffefe;
+            position: relative;
+        }
+
+        .background-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('APP/img/info_aluno.svg') no-repeat center center;
+            background-size: cover;
+            z-index: 0;
+            opacity: 0.3;
         }
 
         .diariobordo {
@@ -24,6 +37,8 @@
             border-radius: 15px;
             box-shadow: 0 0 20px 3px rgba(4, 236, 244, 0.1);
             text-align: center;
+            z-index: 1; /* Garante que o conteúdo fique sobreposto à imagem */
+            position: relative; /* Necessário para que o z-index funcione corretamente */
         }
 
         .diariobordo h1 {
@@ -37,12 +52,13 @@
             margin-top: 10px;
             color: #777;
         }
+        
     </style>
 </head>
 <body>
+    <div class="background-svg"></div>
     <div class="diariobordo">
-        Olá {{ra}}
-
+        Ola {{nome}}
     </div>
 </body>
 </html>
