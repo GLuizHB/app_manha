@@ -1,64 +1,136 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>diariobordo</title>
+    <title>Informações do Aluno</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
-            font-size: 40px;
-            background: linear-gradient(135deg, #030e3f 0%, #35313e 100%);
+            background-color: #1c1b1b;
+        }
+
+        header {
+            background-color: #005fa3;
+            color: white;
+            padding: 10px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            height: 100vh;
-            color: #fffefe;
-            position: relative;
+            padding: 20px;
         }
 
-        .background-svg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('APP/img/info_aluno.svg') no-repeat center center;
-            background-size: cover;
-            z-index: 0;
-            opacity: 0.3;
+        header h1 {
+            margin: 0;
         }
 
-        .diariobordo {
-            background-color: #323232;
-            padding: 30px 40px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px 3px rgba(4, 236, 244, 0.1);
-            text-align: center;
-            z-index: 1; /* Garante que o conteúdo fique sobreposto à imagem */
-            position: relative; /* Necessário para que o z-index funcione corretamente */
+        header .logo img {
+            max-height: 80px;
+            width: auto;
         }
 
-        .diariobordo h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #4A4A4A;
+        header .logo {
+            font-size: px;
+            font-weight: bold;
         }
 
-        .diariobordo p {
-            font-size: 18px;
+        main {
+            display: flex;
+            padding: 20px;
+        }
+
+        .dados-aluno {
+            background-color: #e6e6e6;
+            padding: 20px;
+            width: 30%;
+            border-radius: 10px;
+        
+        }
+
+        .dados-aluno h2 {
+            margin-top: 0;
+        }
+
+        .dados-aluno form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dados-aluno label {
             margin-top: 10px;
-            color: #777;
+            margin-bottom: 5px;
+        }
+
+        .dados-aluno input,
+        .dados-aluno textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            width: calc(100% - 0px); 
+            box-sizing: border-box;
+            
+        }
+
+        #nome {
+            height: 50px;
+        }
+        #endereco {
+            height: 50px;
+        }
+
+        #cursos {
+            height: 550px; 
+        }
+
+        .conteudo {
+            background-color: rgb(193, 193, 193);
+            text-align: center;
+            padding: 20px;
+            width: 70%;
+            border-radius: 10px;
+            ;
         }
         
     </style>
 </head>
+
 <body>
-    <div class="background-svg"></div>
-    <div class="diariobordo">
-        Ola {{nome}}
-    </div>
+    <header>
+        <h1>Ola {{nome}}</h1>
+        <div class="logo">
+        <img src="/APP/img/logo_Senai.png">
+        </div>
+    </header>
+
+    <main>
+        <section class="dados-aluno">
+            <h2>Dados do aluno</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+
+                <label for="endereco">Endereço:</label>
+                <textarea id="endereco" name="endereco"></textarea>
+
+                <label for="cursos">Cursos:</label>
+                <input id="cursos" name="cursos"></input>
+            </form>
+        </section>
+
+        <section class="conteudo">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique
+                bibendum. Donec rutrum sed sem quis venenatis. Proin viverra risus a eros volutpat tempor. In quis arcu
+                et eros porta lobortis sit amet at velit. Proin euismod justo sit amet ex varius, eu scelerisque justo
+                sodales.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique
+                bibendum. Donec rutrum sed sem quis venenatis.</p>
+        </section>
+        
+    </main>
 </body>
+
 </html>
